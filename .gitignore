@@ -1,0 +1,4 @@
+/venv/
+/det_sad/conspect/migrations/*.py
+!/det_sad/conspect/migrations/__init__.py
+/det_sad/db.sqlite3

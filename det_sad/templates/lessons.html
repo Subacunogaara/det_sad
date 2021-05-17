@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Уроки</title>
+</head>
+<body>
+
+{% for lesson in lessons %}
+<div style="border: 1px solid red">
+    {{ lesson.name }}
+    <ul>
+        {% for subject in lesson.subjects.all %}
+        <li>
+            {{ subject.name }}
+            <ul>
+                {% for answer in subject.answermodel_set.all %}
+                <li>{{ answer.text }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+</body>
+</html>
